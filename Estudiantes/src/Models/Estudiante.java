@@ -1,18 +1,20 @@
 package Models;
 
 public class Estudiante {
-    String codigo;
-    String nombre;
-    String edad;
-    String carrera;
-    String asignatura;
+    private String codigo;
+    private String nombre;
+    private String edad;
+    private String carrera;
+    private String asignatura;
+    private Notas notas;
 
-    public Estudiante(String codigo, String nombre, String edad, String carrera, String asignatura) {
+    public Estudiante(String codigo, String nombre, String edad, String carrera, String asignatura, Notas notas) {
         this.codigo = codigo;
         this.nombre = nombre;
         this.edad = edad;
         this.carrera = carrera;
         this.asignatura = asignatura;
+        this.notas = notas;
     }
 
     public String getCodigo() {
@@ -53,5 +55,25 @@ public class Estudiante {
 
     public void setAsignatura(String asignatura) {
         this.asignatura = asignatura;
+    }
+
+    public Notas getNotas() {
+        return notas;
+    }
+
+    public void setNotas(Notas notas) {
+        this.notas = notas;
+    }
+
+    @Override
+    public String toString() {
+        return "Estudiante{" +
+                "codigo='" + codigo + '\'' +
+                ", nombre='" + nombre + '\'' +
+                ", edad='" + edad + '\'' +
+                ", carrera='" + carrera + '\'' +
+                ", asignatura='" + asignatura + '\'' +
+                ", notas=" + notas +
+                '}';
     }
 }

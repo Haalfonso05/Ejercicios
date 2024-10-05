@@ -1,47 +1,36 @@
 package Models;
 
 public class Notas {
-    int notaPrimerPrevio;
-    int notaSegundoPrevio;
-    int notaTercerPrevio;
-    int examen;
+    private double notaPrimerPrevio;
+    private double notaSegundoPrevio;
+    private double notaTercerPrevio;
+    private double examen;
+    private double promedio;
 
-    public Notas(int notaPrimerPrevio, int notaSegundoPrevio, int notaTercerPrevio, int examen) {
+    public Notas(double notaPrimerPrevio, double notaSegundoPrevio, double notaTercerPrevio, double examen, double promedio) {
         this.notaPrimerPrevio = notaPrimerPrevio;
         this.notaSegundoPrevio = notaSegundoPrevio;
         this.notaTercerPrevio = notaTercerPrevio;
         this.examen = examen;
+        this.promedio = promedio;
     }
 
-    public int getNotaPrimerPrevio() {
-        return notaPrimerPrevio;
+    @Override
+    public String toString() {
+        return "{" +
+                "notaPrimerPrevio=" + notaPrimerPrevio +
+                ", notaSegundoPrevio=" + notaSegundoPrevio +
+                ", notaTercerPrevio=" + notaTercerPrevio +
+                ", examen=" + examen +
+                ", promedio=" + promedio +
+                '}';
     }
 
-    public void setNotaPrimerPrevio(int notaPrimerPrevio) {
-        this.notaPrimerPrevio = notaPrimerPrevio;
+    public double getPromedio() {
+        return promedio;
     }
 
-    public int getNotaSegundoPrevio() {
-        return notaSegundoPrevio;
-    }
-
-    public void setNotaSegundoPrevio(int notaSegundoPrevio) {
-        this.notaSegundoPrevio = notaSegundoPrevio;
-    }
-
-    public int getNotaTercerPrevio() {
-        return notaTercerPrevio;
-    }
-
-    public void setNotaTercerPrevio(int notaTercerPrevio) {
-        this.notaTercerPrevio = notaTercerPrevio;
-    }
-
-    public int getExamen() {
-        return examen;
-    }
-
-    public void setExamen(int examen) {
-        this.examen = examen;
+    public void setPromedio(double promedio) {
+        this.promedio = promedio;
     }
 }
